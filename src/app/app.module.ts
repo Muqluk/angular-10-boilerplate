@@ -9,7 +9,10 @@ import { NgxsRouterPluginModule, RouterStateSerializer } from '@ngxs/router-plug
 
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppContainer } from "./app-container/app-container";
+
+import { HomePage } from "./app-container/pages/home/home-page"
 
 export interface RouterStateParams {
   url: string;
@@ -37,14 +40,17 @@ export class CustomRouterStateSerializer implements RouterStateSerializer<Router
 }
 
 @NgModule({
-  declarations: [AppContainer],
-  entryComponents: [],
+  declarations: [
+    AppContainer,
+    HomePage,
+  ],
+  entryComponents: [HomePage],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgxsModule.forRoot([]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsRouterPluginModule.forRoot(),
+    AppRoutingModule,
   ],
   providers: [
     {
@@ -55,16 +61,15 @@ export class CustomRouterStateSerializer implements RouterStateSerializer<Router
   bootstrap: [AppContainer]
 })
 
-export class AppModule { }
-// export class AppModule implements NgxsHmrLifeCycle<Snapshot> {
-//   public hmrNgxsStoreOnInit(
-//     ctx: StateContext<Snapshot>,
-//     snapshot: Partial<Snapshot>
-//   ): void {
-//     ctx.patchState(snapshot);
-//   }
+export class AppModule implements NgxsHmrLifeCycle<Snapshot> {
+  public hmrNgxsStoreOnInit(
+    ctx: StateContext<Snapshot>,
+    snapshot: Partial<Snapshot>
+  ): void {
+    ctx.patchState(snapshot);
+  }
 
-//   public hmrNgxsStoreBeforeOnDestroy(ctx: StateContext<Snapshot>): Partial<Snapshot> {
-//     return ctx.getState();
-//   }
-// }
+  public hmrNgxsStoreBeforeOnDestroy(ctx: StateContext<Snapshot>): Partial<Snapshot> {
+    return ctx.getState();
+  }
+}
