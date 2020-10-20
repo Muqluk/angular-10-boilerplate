@@ -7,11 +7,11 @@ import { NgxsHmrLifeCycle, NgxsHmrSnapshot as Snapshot } from '@ngxs/hmr-plugin'
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsRouterPluginModule, RouterStateSerializer } from '@ngxs/router-plugin';
 
+import {} from "@progress/kendo-angular-layout"
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppContainer } from "./app-container/app-container";
-
 import { HomePage } from "./app-container/pages/home/home-page"
 
 export interface RouterStateParams {

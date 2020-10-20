@@ -1,27 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { DrawerSelectEvent } from '@progress/kendo-angular-layout';
+
 import { Route, Router, RouterEvent, NavigationStart, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  template: `
-    <div>App Container Placeholder</div>
-    <div>
-    <ul>
-      <li 
-        *ngFor="let route of routes"
-        routerLink="{{route.path}}">
-        {{route.path}}
-      </li>
-    </ul>
-    </div>
-    <router-outlet>
-      <span class="loader" *ngIf="loading"></span>
-    </router-outlet>
-  `
+  styleUrls: ['app-container.scss'],
+  templateUrl: 'app-container.html',
 })
 export class AppContainer {
   public loading: boolean;
-  public routes: Array<Route> = [];
+  public routes: Array<Route> = [];s
 
   constructor(router: Router) {
     this.loading = false;

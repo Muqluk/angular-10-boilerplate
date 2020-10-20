@@ -23,6 +23,11 @@
     "@ngxs/hmr-plugin": "^3.7.0",
     "@ngxs/router-plugin": "^3.7.0",
     "@ngxs/store": "^3.7.0",
+    "@progress/kendo-angular-common": "^1.2.3",
+    "@progress/kendo-angular-l10n": "^2.0.2",
+    "@progress/kendo-angular-layout": "^5.0.4",
+    "@progress/kendo-angular-progressbar": "^1.0.0",
+    "@progress/kendo-theme-material": "^3.21.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
