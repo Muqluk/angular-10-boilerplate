@@ -1,0 +1,39 @@
+{
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "files.eol": "\n",
+  "workbench.settings.useSplitJSON": true,
+  "editor.matchBrackets": "always",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "workbench.editor.enablePreview": false,
+  "editor.minimap.enabled": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "workbench.list.openMode": "doubleClick",
+  "files.exclude": {
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#af1339",
+    "activityBar.activeBackground": "#af1339",
+    "activityBar.activeBorder": "#38ad13",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#38ad13",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#810e2a",
+    "titleBar.inactiveBackground": "#810e2a99",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#810e2a",
+    "statusBarItem.hoverBackground": "#af1339",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "peacock.color": "#810e2a"
+}
