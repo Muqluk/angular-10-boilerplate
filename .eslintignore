@@ -1,0 +1,8 @@
+.sourcemaps
+.vscode
+build_scripts
+node_modules
+README__Docs
+webpack
+www
+__tests__
