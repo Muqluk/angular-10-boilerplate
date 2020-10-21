@@ -1,11 +1,13 @@
 <div class="header-container">
   <span class="title">Heading...</span>
 </div>
-<kendo-drawer-container>
+<kendo-drawer-container
+  style="display: flex; flex: 1 1 auto"
+  [ngClass]="{ 'overlay-offset': !isPinned }">
   <kendo-drawer
     #drawer
     [items]="items"
-    mode="overlay"
+    [mode]="mode"
     [mini]="mini"
     (select)="onSelect($event)"
     [autoCollapse]="!isPinned"
@@ -13,7 +15,10 @@
     <ng-template kendoDrawerHeaderTemplate>
       <div
         class="menu-toggle"
-        [ngClass]="{ 'center': !expanded, 'left': expanded }">
+        [ngClass]="{ 
+          'menu-toggle-center': !expanded, 
+          'menu-toggle-left': expanded 
+        }">
         <button
           *ngIf="!isPinned"
           kendoButton
@@ -43,13 +48,13 @@
       </div>
     </ng-template>
   </kendo-drawer>
-</kendo-drawer-container>
-<kendo-drawer-content>
-  <router-outlet>
-    <div class="loading">
+  <kendo-drawer-content [ngStyle]="{'padding-left': !isPinned ? '50px' : '0'}">
+    <router-outlet>
       <div class="loading-wrapper">
-        <span *ngIf="loading" class="loading-icon k-i-loading"></span>
+        <div class="loading">
+          <span *ngIf="loading" class="loading-icon k-i-loading"></span>
+        </div>
       </div>
-    </div>
-  </router-outlet>
-</kendo-drawer-content>
+    </router-outlet>
+  </kendo-drawer-content>
+</kendo-drawer-container>

@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { DrawerComponent, DrawerItem, DrawerMode } from "@progress/kendo-angular-layout";
+import { DrawerComponent, DrawerItem, DrawerMode, DrawerModule } from "@progress/kendo-angular-layout";
 
 import { Route, Router, RouterEvent, NavigationStart, NavigationEnd } from "@angular/router";
 
@@ -15,7 +15,7 @@ export class AppContainer {
   public items: Array<any> = []
   public expanded: boolean;
   public isPinned = false;
-  public mode = "overlay";
+  public mode: DrawerMode = "overlay";
   public mini = true;
 
   constructor(router: Router) {
@@ -44,7 +44,7 @@ export class AppContainer {
 
   pinMenu(): void {
     this.isPinned = !this.isPinned;
-    this.mode = this.isPinned ? 'push' : 'overlay';
+    this.mode = this.isPinned ?  'push' : 'overlay';
     this.mini = !this.isPinned;
   }
 
