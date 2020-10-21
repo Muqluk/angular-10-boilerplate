@@ -49,12 +49,11 @@
     </ng-template>
   </kendo-drawer>
   <kendo-drawer-content [ngStyle]="{'padding-left': !isPinned ? '50px' : '0'}">
-    <router-outlet>
-      <div class="loading-wrapper">
-        <div class="loading">
-          <span *ngIf="loading" class="loading-icon k-i-loading"></span>
-        </div>
+    <router-outlet *ngIf="!loading"></router-outlet>
+    <div *ngIf="loading" class="loading-wrapper">
+      <div class="loading">
+        <span class="loading-icon k-i-loading"></span>
       </div>
-    </router-outlet>
+    </div>
   </kendo-drawer-content>
 </kendo-drawer-container>

@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { DrawerComponent, DrawerItem, DrawerMode, DrawerModule } from "@progress/kendo-angular-layout";
+import { DrawerComponent, DrawerMode } from "@progress/kendo-angular-layout";
 
-import { Route, Router, RouterEvent, NavigationStart, NavigationEnd } from "@angular/router";
+import { Route, Router, NavigationStart, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -18,41 +18,58 @@ export class AppContainer {
   public mode: DrawerMode = "overlay";
   public mini = true;
 
-  constructor(router: Router) {
+  constructor(private router: Router) {
     this.expanded = false;
     this.loading = false;
     this.routes = router.config;
     router.events.subscribe(this.routerEventSubscriber);
-    this.routes.forEach((route: any) => {
+    this.routes.forEach((route: any) => { // eslint-disable-line
       this.items.push({
         text: route.text,
         path: route.path ? route.path : '',
         icon: route.icon,
+        type: 'routerLink',
       });
+    });
+    this.items.push({
+      text: 'Log Out',
+      icon: 'k-i-home',
+      callbackFn: this.logOut,
     });
   }
 
-  routerEventSubscriber(e: any): void { // eslint-disable-line
+  routerEventSubscriber = (e: any): void => { // eslint-disable-line
     if (e instanceof NavigationStart) {
       console.log("router event {e}: ", e);// eslint-disable-line
       this.loading = true;
     } else if (e instanceof NavigationEnd) {
-      console.log("router event {e}: ", e);// eslint-disable-line
-      this.loading = false;
+      setTimeout(() => {
+        console.log("router event {e}: ", e);// eslint-disable-line
+        this.loading = false
+      }, 250);
     }
   }
 
   pinMenu(): void {
     this.isPinned = !this.isPinned;
-    this.mode = this.isPinned ?  'push' : 'overlay';
+    this.mode = this.isPinned ? 'push' : 'overlay';
     this.mini = !this.isPinned;
   }
 
-  onSelect(item: any) {
-    console.log(item);
+  onSelect(menuItem: any): void {// eslint-disable-line
+    const { item } = menuItem;
+    if (item.callbackFn) {
+      item.callbackFn();
+    } else {
+      this.router.navigate([item.path]);
+    }
   }
 
   toggleDrawer(drawer: DrawerComponent): void {
     drawer.toggle();
+  }
+
+  logOut(): void {
+    console.log("log out clicked"); // eslint-disable-line
   }
 }

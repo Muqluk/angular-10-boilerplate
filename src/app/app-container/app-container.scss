@@ -1,12 +1,5 @@
 @import "assets/css/vars.scss";
 
-router-outlet+* {
-  display: flex;
-  flex: 1 1 auto;
-  padding: 5px 15px;
-  height: 100%;
-}
-
 .header-container {
   height: $header-height;
   background: black;
@@ -18,16 +11,25 @@ router-outlet+* {
   font-size: 1.25rem;
 }
 
-.loading {
+
+router-outlet+* {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 5px 15px;
+  height: 100%;
+}
+
+.loading-wrapper {
   position: relative;
 
-  .loading-wrapper {
+  .loading {
     position: absolute;
     top: 50vh;
     left: 50vw;
 
     .loading-icon {
-      font-size: 250px;
+      font-size: 150px;
+      color: $primary;
     }
   }
 }
@@ -92,6 +94,3 @@ kendo-drawer-container {
     height: calc(100% - #{$header-height});
   }
 }
-
-
-
