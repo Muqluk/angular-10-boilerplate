@@ -1,19 +1,55 @@
-<div>
-  <button kendoButton icon="menu" look="flat" styles="font-size: 18px;" (click)="drawer.toggle()"></button>
+<div class="header-container">
+  <span class="title">Heading...</span>
 </div>
 <kendo-drawer-container>
-  <kendo-drawer #drawer
+  <kendo-drawer
+    #drawer
     [items]="items"
-    [mini]="true"
-    [mode]="'push'"
-    [(expanded)]="expanded"
-    (select)="onSelect($event)">
+    mode="overlay"
+    [mini]="mini"
+    (select)="onSelect($event)"
+    [autoCollapse]="!isPinned"
+    [(expanded)]="expanded">
+    <ng-template kendoDrawerHeaderTemplate>
+      <div
+        class="menu-toggle"
+        [ngClass]="{ 'center': !expanded, 'left': expanded }">
+        <button
+          *ngIf="!isPinned"
+          kendoButton
+          icon="menu"
+          look="flat"
+          styles="font-size: 24px;"
+          (click)="toggleDrawer(drawer)">
+        </button>
+        <div
+          *ngIf="expanded"
+          [ngStyle]="{ 'margin-left: 30px': isPinned }"
+          class="menu-expander-pin">
+          <div
+            class="icon-wrapper"
+            [ngClass]="{'menu-is-pinned' : isPinned}">
+            <button
+              kendoButton
+              iconClass="k-icon k-i-pin"
+              look="flat"
+              (click)="pinMenu()">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="isPinned" style="width: 100%">
+        <select></select>
+      </div>
+    </ng-template>
   </kendo-drawer>
-
-  <kendo-drawer-content>
 </kendo-drawer-container>
-<router-outlet>
-  <span class="loader" *ngIf="loading">Loading...</span>
-</router-outlet>
-
+<kendo-drawer-content>
+  <router-outlet>
+    <div class="loading">
+      <div class="loading-wrapper">
+        <span *ngIf="loading" class="loading-icon k-i-loading"></span>
+      </div>
+    </div>
+  </router-outlet>
 </kendo-drawer-content>

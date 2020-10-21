@@ -2,6 +2,11 @@ import { Component } from "@angular/core";
 import { Route, Router, RouterEvent, NavigationStart, NavigationEnd } from "@angular/router";
 
 @Component({
+  // styles: [`
+  //  :host-context(.red-theme) .btn-theme {
+  //       background: red;
+  //     }
+  // `],
   template: `
   <div>Module A Home Page</div>
   <div>

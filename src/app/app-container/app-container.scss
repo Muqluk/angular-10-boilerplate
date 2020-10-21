@@ -1,0 +1,105 @@
+@import "assets/css/vars.scss";
+router-outlet + * {
+  /* your css */
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  margin-left: 50px;
+  padding: 5px 15px;
+}
+
+.header-container {
+  height: $header-height;
+  background: black;
+  color: white;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  padding: 0 25px;
+  font-size: 1.25rem;
+}
+
+.loading{
+  position: relative;
+  .loading-wrapper{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    .loading-icon {
+      font-size: 250px;
+    }
+  }
+}
+
+.menu-toggle {
+  display: flex;
+  cursor: pointer;
+  color: $primary;
+}
+
+.center {
+  justify-content: center;
+}
+
+.left {
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.menu-expander-pin {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  border-radius: 10px;
+  color: $primary;
+}
+
+.icon-wrapper{
+  border-radius: 20px;
+  padding: 2px;
+  margin: 2px;
+  color: $primary;
+
+  &:hover {
+    background: #E9E9E9;
+  }
+}
+.menu-is-pinned {
+  transform: rotate(90deg)
+}
+
+/*  Kendo-specific style overrides */
+
+.k-drawer.k-drawer-start, .k-drawer-left .k-drawer {
+  top: $header-height;
+  height: calc(100%-$header-height);
+}
+.k-drawer {  
+  background: #EFEFEF;
+}
+
+.overlay-offset {
+  .k-drawer-wrapper {
+    height: 100%;
+  }
+
+  /* top-position fit to bottom of header. */
+  //  .k-drawer.k-drawer-start {
+  //    top: $header-height;
+  //   }
+ }
+
+.k-drawer-item {
+  color: $primary;
+}
+
+.k-drawer-item.k-state-selected {
+  background-color: $secondary-3;  
+  color: $primary;
+}
+
+.k-drawer-item.k-state-selected:hover,
+.k-drawer-item.k-state-selected.k-state-hover {
+  background-color: $secondary-3;
+  color: white;
+}

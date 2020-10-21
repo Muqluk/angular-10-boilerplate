@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Params, RouterStateSnapshot } from '@angular/router';
 
 import { NgxsModule, StateContext } from '@ngxs/store';
@@ -7,7 +8,10 @@ import { NgxsHmrLifeCycle, NgxsHmrSnapshot as Snapshot } from '@ngxs/hmr-plugin'
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsRouterPluginModule, RouterStateSerializer } from '@ngxs/router-plugin';
 
-import {} from "@progress/kendo-angular-layout"
+import { ButtonsModule } from "@progress/kendo-angular-buttons";
+import { LayoutModule } from "@progress/kendo-angular-layout";
+import { PopupModule } from '@progress/kendo-angular-popup';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -47,10 +51,15 @@ export class CustomRouterStateSerializer implements RouterStateSerializer<Router
   entryComponents: [HomePage],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgxsModule.forRoot([]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsRouterPluginModule.forRoot(),
     AppRoutingModule,
+    /* Kendo Modules */
+    ButtonsModule,
+    LayoutModule,
+    PopupModule,
   ],
   providers: [
     {
