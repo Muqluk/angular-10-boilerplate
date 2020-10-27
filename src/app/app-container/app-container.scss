@@ -1,5 +1,6 @@
 @import "assets/css/vars.scss";
 
+
 .header-container {
   height: $header-height;
   background: black;
@@ -15,7 +16,6 @@
 router-outlet+* {
   display: flex;
   flex: 1 1 auto;
-  padding: 5px 15px;
   height: 100%;
 }
 

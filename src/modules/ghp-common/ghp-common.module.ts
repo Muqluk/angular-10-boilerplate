@@ -14,6 +14,7 @@ import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
 import { ListViewModule } from '@progress/kendo-angular-listview';
 
 import { GalleryPage, IconViewerPage } from "./pages";
+import { ComponentSandbox } from "./pages/gallery/tabs/sandbox/component-sandbox";
 
 const routePrefix = 'gallery'
 
@@ -27,6 +28,7 @@ export const ModuleRoutes = [
   declarations: [
     GalleryPage,
     IconViewerPage,
+    ComponentSandbox,
   ],
   entryComponents: [
     GalleryPage,
