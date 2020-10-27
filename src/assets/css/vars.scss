@@ -1,0 +1,25 @@
+$primary: #4d7ea3;
+$primary-2: rgba($primary, .65);
+$primary-3: rgba($primary, .15);
+
+$secondary:#539a63;
+$secondary-2: rgba($secondary, .65);
+$secondary-3: rgba($secondary, .55);
+
+$font-family: Roboto,"Helvetica Neue",sans-serif;
+$primary-text: white;
+
+/*  Header  */
+$header-height: 55px;
+$header-bg-color: black;
+$header-text-color: white;
+$header-logo-image: url("/assets/img/logo_sm.png");
+$header-logo-height: 34px;
+$header-logo-width: 65px;
+
+$site-title-font-weight: 500;
+$site-title-font-size: 1.25rem;
+$site-title-font-family: $font-family;
+
+/*  main content  */
+$content-bg-color: #999999;

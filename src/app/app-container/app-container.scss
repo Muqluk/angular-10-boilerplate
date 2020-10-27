@@ -1,0 +1,96 @@
+@import "assets/css/vars.scss";
+
+.header-container {
+  height: $header-height;
+  background: black;
+  color: white;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  padding: 0 25px;
+  font-size: 1.25rem;
+}
+
+
+router-outlet+* {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 5px 15px;
+  height: 100%;
+}
+
+.loading-wrapper {
+  position: relative;
+
+  .loading {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+
+    .loading-icon {
+      font-size: 150px;
+      color: $primary;
+    }
+  }
+}
+
+.menu-toggle {
+  display: flex;
+  cursor: pointer;
+  color: $primary;
+}
+
+.menu-toggle-center {
+  justify-content: center;
+}
+
+.menu-toggle-left {
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.menu-expander-pin {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  border-radius: 10px;
+  color: $primary;
+}
+
+.icon-wrapper {
+  border-radius: 20px;
+  padding: 2px;
+  margin: 2px;
+  color: $primary;
+
+  &:hover {
+    background: #E9E9E9;
+  }
+}
+
+.menu-is-pinned {
+  transform: rotate(90deg)
+}
+
+/*  Kendo-specific style overrides */
+kendo-drawer-container {
+  height: calc(100% - #{$header-height});
+}
+
+.k-drawer-content {
+  height: 100%;
+}
+
+.k-drawer-wrapper {
+  height: 100%;
+  background: #EFEFEF;
+  border-right: 1px solid #E0E0E0;
+  color: $primary;
+}
+
+.overlay-offset {
+  .k-drawer.k-drawer-start {
+    top: $header-height;
+    height: calc(100% - #{$header-height});
+  }
+}

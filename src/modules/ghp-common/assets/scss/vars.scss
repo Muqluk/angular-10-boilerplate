@@ -1,0 +1,36 @@
+$primary-text: white;
+
+$primary: #4d7ea3;
+$primary-2: rgba($primary, .65);
+$primary-3: rgba($primary, .15);
+
+$secondary:#539a63;
+$secondary-2: rgb(93, 172, 111);
+$secondary-3: rgb(181, 240, 195);
+
+$card-box-shadow: -3px 3px 6px 1px rgba(0, 0, 0, 0.2);
+
+
+/* kendo */
+$grid-background-dark: #eeeeee;
+
+$grid-border-color: rgba(0, 0, 0, 0.08);
+$border-radius: 4px;
+
+$badge-light: #747a80;
+$badge-dark: #343a40;
+
+$item-hover: #dddddd;
+$item-hover-text: #343a40;
+$item-selected: $primary;
+$item-selected-text: white;
+
+$error-background: rgba(255, 0, 0, 0.07);
+$error-border: rgba(255, 0, 0, 0.1);
+$error-text: red;
+
+$formFontSizeIonic: 1.2rem;
+$formFontSizeAng9: .8rem;
+$formFontSize: $formFontSizeIonic;
+
+$themedButtonBlue: $primary;
