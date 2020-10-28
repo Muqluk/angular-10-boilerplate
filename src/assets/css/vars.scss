@@ -6,8 +6,10 @@ $secondary:#539a63;
 $secondary-2: rgba($secondary, .65);
 $secondary-3: rgba($secondary, .55);
 
+$line-height: 1em;
+
 $font-family: Roboto,"Helvetica Neue",sans-serif;
-$font-size: .8rem;
+$font-size: 1rem; 
 $primary-text: white;
 
 /*  Header  */
@@ -22,5 +24,11 @@ $site-title-font-weight: 500;
 $site-title-font-size: 1.25rem;
 $site-title-font-family: $font-family;
 
+/* Drawer */
+$drawer-border-color: #E0E0E0;
+$drawer-wrapper-bg-color: #EFEFEF;
+
+$drawer-wrapper-border-right: 1px solid $drawer-border-color;
+
 /*  main content  */
-$content-bg-color: #999999;
+$content-bg-color: white;

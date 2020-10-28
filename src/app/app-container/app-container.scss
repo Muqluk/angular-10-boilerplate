@@ -1,6 +1,5 @@
 @import "assets/css/vars.scss";
 
-
 .header-container {
   height: $header-height;
   background: black;
@@ -10,13 +9,6 @@
   align-items: center;
   padding: 0 25px;
   font-size: 1.25rem;
-}
-
-
-router-outlet+* {
-  display: flex;
-  flex: 1 1 auto;
-  height: 100%;
 }
 
 .loading-wrapper {
@@ -73,20 +65,7 @@ router-outlet+* {
 }
 
 /*  Kendo-specific style overrides */
-kendo-drawer-container {
-  height: calc(100% - #{$header-height});
-}
 
-.k-drawer-content {
-  height: 100%;
-}
-
-.k-drawer-wrapper {
-  height: 100%;
-  background: #EFEFEF;
-  border-right: 1px solid #E0E0E0;
-  color: $primary;
-}
 
 .overlay-offset {
   .k-drawer.k-drawer-start {
@@ -94,3 +73,4 @@ kendo-drawer-container {
     height: calc(100% - #{$header-height});
   }
 }
+
