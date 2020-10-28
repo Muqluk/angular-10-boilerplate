@@ -1,7 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 
 @Component({
-  selector: 'ghp-common-gallery',
+  encapsulation: ViewEncapsulation.None,
+  selector: 'gallery-page',
   styleUrls: ['gallery-page.scss'],
   templateUrl: 'gallery-page.html'
 })

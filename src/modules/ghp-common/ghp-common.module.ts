@@ -13,7 +13,10 @@ import { GridModule, ExcelModule, PDFModule } from "@progress/kendo-angular-grid
 import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
 import { ListViewModule } from '@progress/kendo-angular-listview';
 
-import { TextBox } from "./components"
+import {
+  Label,
+  TextBox,
+} from "./components"
 
 import { GalleryPage, IconViewerPage } from "./pages";
 import { ComponentSandbox } from "./pages/gallery/tabs/sandbox/component-sandbox";
@@ -31,6 +34,7 @@ export const ModuleRoutes = [
     GalleryPage,
     IconViewerPage,
     ComponentSandbox,
+    Label,
     TextBox,
   ],
   entryComponents: [
@@ -40,6 +44,7 @@ export const ModuleRoutes = [
   exports: [
     GalleryPage,
     IconViewerPage,
+    Label,
     TextBox,
   ],
   imports: [

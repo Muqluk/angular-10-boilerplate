@@ -14,7 +14,10 @@ type formControl = {
 }
 //#endregion
 
-@Component({ template: '' })
+@Component({ 
+  styleUrls: ['../../assets/scss/common.scss'], // TODO:  This may not work like I hope... jwl 10-28-2020
+  template: '' 
+})
 export abstract class FormControlBase implements OnInit {
   //#region Template Properties
   @Output() valueChanged = new EventEmitter();

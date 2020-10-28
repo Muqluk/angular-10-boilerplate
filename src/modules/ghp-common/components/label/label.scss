@@ -1,0 +1,8 @@
+@import '../../assets/scss/common.scss';
+
+.label-text {  
+  margin-right: 5px;
+  min-width: 150px;
+  font-size: $formFontSize;
+  white-space: nowrap;
+}

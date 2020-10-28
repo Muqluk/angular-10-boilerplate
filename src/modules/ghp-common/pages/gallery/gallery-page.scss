@@ -1,1 +1,11 @@
 @import '../../assets/scss/common.scss';
+
+gallery-page {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+
+  .k-content {
+    background-color: #222 !important;
+  }
+}
