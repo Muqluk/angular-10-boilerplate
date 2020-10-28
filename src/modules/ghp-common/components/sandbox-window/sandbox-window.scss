@@ -1,0 +1,58 @@
+@import '../../assets/scss/common.scss';
+
+$check-color: #AFAFAF;
+
+sandbox-window {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin: 25px 50px;
+  height: calc(100% - 50px);
+  border: $subtle-border;
+  border-radius: 7px;
+  border-top: none;
+  background-color: #EDEDED;
+
+  .sandbox-toolbar {
+    min-height: 25px;
+    background: $primary;
+    margin-bottom: 1px;
+    color: white;
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 7px 7px 0 0;
+
+  }
+
+  .sandbox-subject {
+    margin: auto;
+    background-color: #222;
+    border-radius: 8px;
+    padding: 3px;
+    height: max-content;
+
+    .display-port {
+
+      background-color: white;
+      border-radius: 5px;
+      background-image:
+        linear-gradient(45deg, $check-color 25%, transparent 25%),
+        linear-gradient(-45deg, $check-color 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, $check-color 75%),
+        linear-gradient(-45deg, transparent 75%, $check-color 75%);
+      background-position:
+        0 0,
+        0 10px,
+        10px -10px,
+        -10px 0px;
+      background-size: 20px 20px;
+
+      .sandbox-item {
+        padding: 50px;
+      }
+
+    }
+  }
+}

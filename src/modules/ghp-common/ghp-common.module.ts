@@ -3,6 +3,8 @@ import { RouterModule } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+//#region Kendo Imports
+
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
@@ -13,13 +15,16 @@ import { GridModule, ExcelModule, PDFModule } from "@progress/kendo-angular-grid
 import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
 import { ListViewModule } from '@progress/kendo-angular-listview';
 
+//#endregion
+
 import {
   Label,
+  SandboxWindow,
   TextBox,
 } from "./components"
 
-import { GalleryPage, IconViewerPage } from "./pages";
-import { ComponentSandbox } from "./pages/gallery/tabs/sandbox/component-sandbox";
+import { ComponentSandbox, GalleryPage } from "./pages/gallery/gallery-page";
+import { IconViewerPage } from "./pages/icon-viewer/icon-viewer";
 
 const routePrefix = 'gallery'
 
@@ -32,8 +37,9 @@ export const ModuleRoutes = [
 @NgModule({
   declarations: [
     GalleryPage,
-    IconViewerPage,
     ComponentSandbox,
+    IconViewerPage,
+    SandboxWindow,
     Label,
     TextBox,
   ],
@@ -45,6 +51,7 @@ export const ModuleRoutes = [
     GalleryPage,
     IconViewerPage,
     Label,
+    SandboxWindow,
     TextBox,
   ],
   imports: [

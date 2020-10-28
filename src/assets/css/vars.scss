@@ -8,8 +8,10 @@ $secondary-3: rgba($secondary, .55);
 
 $line-height: 1em;
 
-$font-family: Roboto,"Helvetica Neue",sans-serif;
-$font-size: 1rem; 
+$font-family: Roboto,
+"Helvetica Neue",
+sans-serif;
+$font-size: 1rem;
 $primary-text: white;
 
 /*  Header  */
@@ -32,6 +34,8 @@ $drawer-wrapper-border-right: 1px solid $drawer-border-color;
 
 /*  main content  */
 $content-bg-color: white;
+$subtle-border-color: rgba(0, 0, 0, .08);
+$subtle-border: .05rem solid $subtle-border-color;
 
 /* Forms */
 $formFontSize: .8rem;

@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from "@angular/core";
+import { ComponentSandbox } from "./tabs/component-sandbox/component-sandbox";
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -6,4 +7,9 @@ import { Component, ViewEncapsulation } from "@angular/core";
   styleUrls: ['gallery-page.scss'],
   templateUrl: 'gallery-page.html'
 })
-export class GalleryPage { }
+class GalleryPage { }
+
+export {
+  ComponentSandbox,
+  GalleryPage,
+}
