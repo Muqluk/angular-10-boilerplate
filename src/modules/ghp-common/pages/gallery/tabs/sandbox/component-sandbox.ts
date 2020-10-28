@@ -1,4 +1,8 @@
-import { Component, ViewEncapsulation } from "@angular/core";
+/* 
+  eslint-disable
+    @typescript-eslint/no-explicit-any
+*/
+import { Component, ContentChildren, QueryList, ViewEncapsulation } from "@angular/core";
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -6,4 +10,6 @@ import { Component, ViewEncapsulation } from "@angular/core";
   styleUrls: ['component-sandbox.scss'],
   templateUrl: 'component-sandbox.html',
 })
-export class ComponentSandbox { }
+export class ComponentSandbox {
+  @ContentChildren('child', { descendants: true }) Children: QueryList<any>;
+}
