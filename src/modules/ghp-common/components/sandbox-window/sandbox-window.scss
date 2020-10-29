@@ -1,30 +1,18 @@
 @import '../../assets/scss/common.scss';
 
-$check-color: #AFAFAF;
+$bg-color-1: #CCC;
+$bg-color-2: #888;
 
 sandbox-window {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  margin: 25px 50px;
-  height: calc(100% - 50px);
+  margin: 10px 20px;
+  height: calc(100% - 20px);
   border: $subtle-border;
   border-radius: 7px;
   border-top: none;
-  background-color: #EDEDED;
-
-  .sandbox-toolbar {
-    min-height: 25px;
-    background: $primary;
-    margin-bottom: 1px;
-    color: white;
-    display: flex;
-    flex: 0 1 auto;
-    align-items: center;
-    padding: 5px 15px;
-    border-radius: 7px 7px 0 0;
-
-  }
+  background-color: #333333;
 
   .sandbox-subject {
     margin: auto;
@@ -35,13 +23,13 @@ sandbox-window {
 
     .display-port {
 
-      background-color: white;
+      background-color:$bg-color-1;
       border-radius: 5px;
       background-image:
-        linear-gradient(45deg, $check-color 25%, transparent 25%),
-        linear-gradient(-45deg, $check-color 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, $check-color 75%),
-        linear-gradient(-45deg, transparent 75%, $check-color 75%);
+        linear-gradient(45deg, $bg-color-2 25%, transparent 25%),
+        linear-gradient(-45deg, $bg-color-2 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, $bg-color-2 75%),
+        linear-gradient(-45deg, transparent 75%, $bg-color-2 75%);
       background-position:
         0 0,
         0 10px,

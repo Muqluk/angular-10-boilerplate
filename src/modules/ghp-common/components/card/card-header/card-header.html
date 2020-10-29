@@ -1,0 +1,16 @@
+<div class="g-card-header">
+  <div>
+    <span>{{CardTitle}}</span>
+  </div>
+  <div>
+    <ng-content HeaderContent></ng-content>
+  </div>
+  <div>
+    <button
+      kendoButton
+      iconClass="k-icon {{contentToggleIcon}}"
+      look="flat"
+      (click)="minMaxToggle()">
+    </button>
+  </div>
+</div>

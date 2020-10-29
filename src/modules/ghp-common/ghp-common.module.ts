@@ -18,6 +18,8 @@ import { ListViewModule } from '@progress/kendo-angular-listview';
 //#endregion
 
 import {
+  Card,
+  CardHeader,
   Label,
   SandboxWindow,
   TextBox,
@@ -37,6 +39,8 @@ export const ModuleRoutes = [
 
 @NgModule({
   declarations: [
+    Card,
+    CardHeader,
     GalleryPage,
     ComponentSandbox,
     IconViewerPage,
@@ -50,6 +54,8 @@ export const ModuleRoutes = [
     IconViewerPage,
   ],
   exports: [
+    Card,
+    CardHeader,
     GalleryPage,
     IconViewerPage,
     Label,

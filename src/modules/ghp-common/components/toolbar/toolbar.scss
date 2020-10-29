@@ -1,0 +1,13 @@
+@import '../../assets/scss/common.scss';
+
+.toolbar-items {
+  min-height: 25px;
+  background: $primary;
+  margin-bottom: 1px;
+  color: white;
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 7px 7px 0 0;
+}
