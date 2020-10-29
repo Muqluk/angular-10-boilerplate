@@ -21,6 +21,7 @@ import {
   Label,
   SandboxWindow,
   TextBox,
+  Toolbar,
 } from "./components"
 
 import { ComponentSandbox, GalleryPage } from "./pages/gallery/gallery-page";
@@ -42,6 +43,7 @@ export const ModuleRoutes = [
     SandboxWindow,
     Label,
     TextBox,
+    Toolbar,
   ],
   entryComponents: [
     GalleryPage,
@@ -53,6 +55,7 @@ export const ModuleRoutes = [
     Label,
     SandboxWindow,
     TextBox,
+    Toolbar,
   ],
   imports: [
     ButtonsModule,
