@@ -3,26 +3,30 @@
 .g-card {
   min-width: 300px;
   margin: 10px;
-  background: white;
+  // background: white;
+  background: $subtle-border-color;
   box-shadow: $card-box-shadow;
-  border-radius: $border-radius;
-
+  border-radius: $border-radius; 
+  
   .g-card-content {
+    padding: 0 2px 0 2px;
+    min-height: 6px;    
+  }
+  .g-content {
+    background: white;
+    border: $subtle-border;
+    border-radius: $border-radius;
     height: 100%;
-    .g-content {
-      margin: 5px;
-    }
-    .g-content-min {
-      height: 0;
-      transition: height .5s;
-      overflow: hidden;
-      display: none;
-    }
+    margin: 0;
+    transition: height 1.5s;
   }
 
-
+  .g-content-min {
+    height: 0;
+    overflow: none;
+    display: none;
+  }
 }
-
 
 .g-card-header {
   display: flex;
@@ -39,3 +43,4 @@
     outline: none !important;
   }
 }
+
