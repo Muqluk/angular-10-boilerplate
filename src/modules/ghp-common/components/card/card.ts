@@ -23,10 +23,23 @@ import { CardHeader } from "./card-header/card-header";
   selector: 'genesis-card',
   styleUrls: ['./card.scss'],
   templateUrl: './card.html',
+  animations: [
+    trigger('showHideContent', [
+      state('true', style({
+        height: 0,
+      })),
+      state('false', style({
+        height: '{{contentHeight}}px',
+      }), { params: { contentHeight: '25px' } }),
+      transition('true => false', animate('.5s linear')),  // animation timing
+      transition('false => true', animate('.5s linear'))
+    ])
+  ],
 })
 class Card {
   @ContentChild(CardHeader) Header!: CardHeader;
   @ContentChildren('', { descendants: true }) CardContent: QueryList<any>;
+  @ViewChild("contentContainer") contentContainer: ElementRef;
 
   public minimizeContent: boolean = false;
   public contentHeight: number = 250;
@@ -34,7 +47,9 @@ class Card {
   MinMaxContentHandler(isMin: boolean): void {
     this.minimizeContent = isMin;
   }
-  ngAfterViewChecked() { }
+  ngAfterViewInit() {
+    this.contentHeight = (<HTMLElement>this.contentContainer.nativeElement).getBoundingClientRect().height;
+  }
 
 }
 

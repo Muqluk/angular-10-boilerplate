@@ -3,11 +3,7 @@
     (MinMaxContent)="MinMaxContentHandler($event)">
   </genesis-card-header>
   <div class="g-card-content">
-    <div
-      class="g-content"
-      #contentContainer
-      [ngStyle]="{height: contentHeight}"
-      [ngClass]="{ 'g-content-min': minimizeContent  }">
+    <div class="g-content" #contentContainer [@showHideContent]="minimizeContent">
       <ng-content CardContent></ng-content>
     </div>
   </div>
