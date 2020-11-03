@@ -1,0 +1,116 @@
+.transformable {
+  border: 1px solid silver;
+  border-radius: 4px;
+  margin: auto;
+
+  .bar {
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: silver;
+    color: black;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    background-color: red;
+    height: 270px;
+    transition: height 1.5s;
+  }
+  .toggler {
+    height: 0;
+  }
+}
+
+/* The animation code */
+// @keyframes example {
+//   0% {
+//     background-color: red;
+//     border-radius: 20px 2px;
+//   }
+//   50% {
+//     background-color: yellow;
+//     border-radius: 2px 20px;
+//   }
+//   100% {
+//     background-color: red;
+//     border-radius: 20px 2px;
+//   }
+// }
+// @keyframes example2 {
+//   0% {
+//     border-radius: 25px 5px 25px 25px;
+//   }
+//   25% {
+//     border-radius: 25px 25px 5px 25px;
+//   }
+//   50% {
+//     border-radius: 25px 25px 25px 25px;
+//   }
+//   75% {
+//     border-radius: 5px 25px 25px 25px;
+//   }
+//   100% {
+//     border-radius: 25px 5px 25px 25px;
+//   }
+// }
+@keyframes SlideRight {
+  0% {
+    left: 50px;
+    border-radius: 15px;
+    opacity: .2;
+  }
+  15% {
+    background: red;
+    border-radius: 25px;
+    opacity: 1;
+  }
+  50% {
+    left: 350px;
+    background: white;
+    border-radius: 15px;
+    opacity: .2;
+  }
+  65% {
+    background: red;
+    border-radius: 25px;
+    opacity: 1;
+  }
+  100% {
+    left: 50px;
+    background: white;
+    border-radius: 15px;
+    opacity: .2;
+  }
+}
+@keyframes wobbly {
+  0% {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  50% {
+    border-radius: 0;
+    /*
+    border-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    */
+  }
+  100% {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+}
+
+.slidingDiv {
+  width: 50px;
+  height: 50px;
+  left: 50px;
+  top: 450px;
+  position: absolute;
+  background: white;
+  animation: SlideRight 2s infinite;
+  animation-duration: 5s;
+}

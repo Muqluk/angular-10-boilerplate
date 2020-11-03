@@ -5,4 +5,10 @@ import { Component } from "@angular/core";
   styleUrls: ['component-sandbox.scss'],
   templateUrl: 'component-sandbox.html',
 })
-export class ComponentSandbox { }
+export class ComponentSandbox {
+  toggled = false;
+
+  clicky() {
+    this.toggled = !this.toggled;
+  }
+}

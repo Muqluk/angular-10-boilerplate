@@ -1,7 +1,13 @@
 <div class="g-card">
-  <genesis-card-header (MinMaxContent)="MinMaxContentHandler($event)"></genesis-card-header>
+  <genesis-card-header
+    (MinMaxContent)="MinMaxContentHandler($event)">
+  </genesis-card-header>
   <div class="g-card-content">
-    <div class="g-content" [ngClass]="{ 'g-content-min': minimizeContent  }">
+    <div
+      class="g-content"
+      #contentContainer
+      [ngStyle]="{height: contentHeight}"
+      [ngClass]="{ 'g-content-min': minimizeContent  }">
       <ng-content CardContent></ng-content>
     </div>
   </div>

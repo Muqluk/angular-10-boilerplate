@@ -1,18 +1,38 @@
 <genesis-card>
-  <sandbox-window>
-    <genesis-textbox Label="Textbox Component"></genesis-textbox>
-    <genesis-textbox Label="Textbox Component"></genesis-textbox>
-  </sandbox-window>
+  <div style="
+    height: 300px; 
+    width: 500px; 
+    background: #222; 
+    margin: auto;
+  ">
+    <div class="transformable">
+      <div class="bar" (click)="clicky()">clicky</div>
+      <div
+        class="container"
+        [ngClass]="{ 'toggler': toggled}"></div>
+    </div>
+  </div>
+
 </genesis-card>
-<genesis-card>
-  <sandbox-window>
-    <genesis-card>
-      <div>
-        doing a test
-      </div>
-    </genesis-card>
-  </sandbox-window>
-</genesis-card>
-<genesis-card>
-  <kendo-grid style="height: 400px"></kendo-grid>
-</genesis-card>
+<div class="slidingDiv"></div>
+
+<!-- 
+  <genesis-card>
+    <sandbox-window>
+      <genesis-textbox Label="Textbox Component"></genesis-textbox>
+      <genesis-textbox Label="Textbox Component"></genesis-textbox>
+    </sandbox-window>
+  </genesis-card>
+  <genesis-card>
+    <sandbox-window>
+      <genesis-card>
+        <div>
+          doing a test
+        </div>
+      </genesis-card>
+    </sandbox-window>
+  </genesis-card>
+  <genesis-card>
+    <kendo-grid style="height: 400px"></kendo-grid>
+  </genesis-card> 
+-->
