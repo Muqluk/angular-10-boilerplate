@@ -29,8 +29,8 @@ import { CardHeader } from "./card-header/card-header";
         height: 0,
       })),
       state('false', style({
-        height: '{{contentHeight}}px',
-      }), { params: { contentHeight: '25px' } }),
+        height: '*',
+      })),
       transition('true => false', animate('.5s linear')),  // animation timing
       transition('false => true', animate('.5s linear'))
     ])

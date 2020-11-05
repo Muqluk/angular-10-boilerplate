@@ -1,15 +1,5 @@
 @import '../../assets/scss/common.scss';
 
-@keyframes MinMax {
-  0% {
-    height: 100%;    
-  }
-  100% {
-    height: 0%
-  }
-}
-
-
 .g-card {
   min-width: 300px;
   margin: 10px;
@@ -19,8 +9,9 @@
   border-radius: $border-radius; 
   
   .g-card-content {
-    padding: 0 2px 0 2px;
+    padding: 2px;
     min-height: 6px;    
+
   }
   .g-content {
     background: white;
@@ -28,15 +19,6 @@
     border-radius: $border-radius;
     margin: 0;
     overflow: hidden;
-    // transition: height 1.25s ease-in-out;
-  }
-
-  .g-content-min {
-    animation: MinMax 2s;
-    
-    // height: 0;
-    // overflow: none;
-    // display: none;
   }
 }
 
