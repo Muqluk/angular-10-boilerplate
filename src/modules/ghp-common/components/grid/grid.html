@@ -1,0 +1,29 @@
+<kendo-grid
+  #gridRef
+  [data]="data"
+  [loading]="loading"
+
+  (columnVisibilityChange)="columnVisibilityChange($event)"
+
+  [pageable]="pageable"
+  [pageSize]="pageSize"
+
+  [height]="height">
+  <!-- [virtualColumns]="true" -->
+  <ng-template kendoGridToolbarTemplate>
+    <div style="display: flex; flex: 1 1 auto; ">
+      <div>
+        <button kendoButton (click)="clikity(gridRef)">Click</button>
+      </div>
+      <div style=" display: flex; flex: 1 1 auto;"></div>
+      <div>
+        <!-- <kendo-grid-column-chooser
+          class="column-chooser"
+          allowHideAll="false"
+          autoSync="true">
+        </kendo-grid-column-chooser> -->
+      </div>
+    </div>
+
+  </ng-template>
+</kendo-grid>
