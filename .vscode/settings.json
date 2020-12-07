@@ -17,8 +17,7 @@
   "explorer.confirmDragAndDrop": false,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "workbench.list.openMode": "doubleClick",
-  "files.exclude": {
-  },
+  "files.exclude": {},
   "workbench.colorCustomizations": {
     "activityBar.background": "#af1339",
     "activityBar.activeBackground": "#af1339",

@@ -1,7 +1,12 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { DrawerComponent, DrawerMode } from "@progress/kendo-angular-layout";
+import { DrawerComponent, DrawerItem, DrawerMode } from "@progress/kendo-angular-layout";
 
 import { Route, Router, NavigationStart, NavigationEnd } from "@angular/router";
+
+interface MenuItems extends DrawerItem {
+  path?: string;
+  callbackFn?: () => void;
+}
 
 @Component({
   selector: 'app-root',
@@ -12,7 +17,7 @@ import { Route, Router, NavigationStart, NavigationEnd } from "@angular/router";
 export class AppContainer {
   public loading: boolean;
   public routes: Array<Route> = [];
-  public items: Array<any> = []
+  public items: Array<MenuItems> = []
   public expanded: boolean;
   public isPinned = false;
   public mode: DrawerMode = "overlay";
@@ -24,12 +29,13 @@ export class AppContainer {
     this.routes = router.config;
     router.events.subscribe(this.routerEventSubscriber);
     this.routes.forEach((route: any) => { // eslint-disable-line
-      this.items.push({
-        text: route.text,
-        path: route.path ? route.path : '',
-        icon: route.icon,
-        type: 'routerLink',
-      });
+      if (route && route.text && route.icon) {
+        this.items.push({
+          text: route.text,
+          path: route.path ? route.path : '',
+          icon: route.icon,
+        });
+      }
     });
     this.items.push({
       text: 'Log Out',
@@ -40,11 +46,11 @@ export class AppContainer {
 
   routerEventSubscriber = (e: any): void => { // eslint-disable-line
     if (e instanceof NavigationStart) {
-      console.log("router event {e}: ", e);// eslint-disable-line
+      // console.log("router event {e}: ", e);// eslint-disable-line
       this.loading = true;
     } else if (e instanceof NavigationEnd) {
       setTimeout(() => {
-        console.log("router event {e}: ", e);// eslint-disable-line
+        // console.log("router event {e}: ", e);// eslint-disable-line
         this.loading = false
       }, 250);
     }

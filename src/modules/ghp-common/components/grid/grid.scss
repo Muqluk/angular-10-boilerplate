@@ -1,0 +1,413 @@
+@import '../../assets/scss/common.scss';
+
+.ghp-grid {
+  .k-grid {
+    // padding: 3px;
+    background: $grid-background-dark;
+  }
+
+  .k-grid-header .k-header {
+    height: 14px;
+    padding: 2px 10px;
+  }
+
+  .k-grid th {
+    padding: 0;
+  }
+
+  .k-grid tbody tr {
+    line-height: 14px;
+  }
+
+  .k-grid tbody td {
+    padding: 2px 10px;
+
+    ::selection {
+      background-color: $secondary;
+    }
+  }
+
+  .k-grid-footer {
+    background: $grid-background-dark;
+  }
+
+  .k-pager-wrap {
+    background: $grid-background-dark;
+  }
+
+  .k-grid-pager {
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .k-grid-toolbar {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+    background-color: $primary-3;
+    flex-wrap: wrap;
+
+    .toolbar-wrapper {
+      display: flex;
+      flex: 1 1 auto;
+    }
+
+    .info {
+      color: $primary;
+      font-size: 11px;
+      padding-left: 5px;
+      font-weight: 600;
+      margin: auto;
+      max-height: 26px;
+    }
+
+    .toolbar {
+      flex-direction: row;
+      display: flex;
+      flex: 1 1 auto;
+      max-height: 26px;
+
+      .export-buttons {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: flex-end;
+
+        button:hover {
+          color: black;
+        }
+
+        .k-button {
+          padding: 0;
+          height: 23px;
+          width: 23px;
+        }
+
+        .k-button-icon {
+          height: 23px;
+          width: 23px;
+          padding: 0;
+        }
+
+        .k-textbox {
+          border-color: rgba(0, 0, 0, 0.15);
+          height: 23px;
+          font-size: 11px;
+          margin-top: -2px;
+          margin-right: -7px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .clear-filter-icon {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+
+    .k-button-icon {
+      height: 20px;
+      width: 20px;
+    }
+
+    .k-icon {}
+  }
+
+  .k-footer-template {
+    padding: 0;
+    line-height: 0;
+  }
+
+  .pdf-export-footer {
+    display: flex;
+    flex: 1 1 auto;
+    background: $header-bg-color;
+    color: white;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    justify-content: space-between;
+    min-height: 0;
+    padding: 5px;
+  }
+}
+
+.ghp-grid-hideheader {
+  .k-grid-header {
+    display: none;
+  }
+}
+
+.ghp__grid__no-rows-found {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 22px;
+  background: $grid-background-dark;
+  border-color: $grid-border-color;
+}
+
+.ghp__grid-as-listbox {
+  width: 200px;
+  max-width: 200px;
+  height: 200px;
+
+  .k-grid-content {
+    overflow-x: hidden;
+  }
+}
+
+.ghp__grid2 {
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  border-radius: $border-radius;
+
+  .ghp__grid2--heading {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    margin-left: -1px;
+
+    .k-button-icon {
+      padding: 0;
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  .k-grid-toolbar {
+    padding: 0;
+  }
+
+  .applied-filters {
+    background: $primary-3;
+    margin-left: -1px;
+    padding: 0 10px;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+
+    .k-chip,
+    .k-button {
+      font-size: 11px;
+    }
+  }
+
+  .info-message {
+    background: $primary-3;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    margin-left: -1px;
+    ;
+
+    color: $primary;
+    font-size: 11px;
+    padding-left: 5px;
+    font-weight: 600;
+    min-height: 22px;
+    max-height: 26px;
+  }
+
+
+  .toolbar-buttons {
+    display: flex;
+    flex-direction: row;
+
+    .k-button-icon {
+      height: 23px;
+      width: 23px;
+      padding: 0;
+    }
+
+    .k-button {
+      padding: 0;
+      height: 23px;
+      width: 23px;
+      background-color: $primary-3; // something is currently overriding this...
+    }
+
+
+    .column-chooser {
+      .k-icon {
+        padding: 0;
+        transform: rotate(-90deg);
+      }
+    }
+
+    .export-buttons {
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: flex-end;
+
+      button:hover {
+        color: black;
+      }
+
+      .k-icon {
+        padding: 0;
+      }
+    }
+  }
+
+  .k-grid th {
+    padding: 0;
+  }
+
+  .k-grid tbody tr {
+    line-height: 14px;
+  }
+
+  .k-grid tbody td {
+    padding: 2px 10px;
+
+    ::selection {
+      background-color: $secondary;
+    }
+  }
+
+  .k-icon {
+    font-size: 12px !important;
+  }
+
+  .k-button-icon {
+    height: 22px !important;
+    width: 22px !important;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  .ghp-column-header {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 26px;
+    padding: 0;
+
+    .ghp-column-title {
+      display: flex;
+      flex: 1 1 auto;
+      align-items: center;
+      height: 100%;
+      margin-right: 1px;
+    }
+
+    .title-text {
+      padding-left: 5px;
+    }
+
+    server-side-filter {
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: flex-end;
+
+      .k-button {
+        background: transparent;
+        color: rgba(0, 0, 0, .6);
+      }
+    }
+
+    .grid-column-filter {
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: center;
+
+
+      combo-filter {
+        width: 200px;
+      }
+
+      .k-combobox {
+        width: 200px;
+      }
+
+      .k-select {
+        width: 17px;
+      }
+
+      input {
+        flex: 1 1 auto;
+        margin: 0 2px;
+        height: 22px;
+      }
+
+      .search {
+        margin-left: -25px;
+        background: transparent;
+
+        >*:hover {
+          background: transparent;
+        }
+      }
+
+      text-filter {
+        display: flex;
+        width: 200px;
+        flex-direction: row;
+        position: relative;
+
+        .float-button-container {
+          position: relative;
+          width: 0;
+          height: 0;
+        }
+
+        .float-button {
+          position: absolute;
+          z-index: 999;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+.g-grid {
+  min-width: 300px;
+  margin: 10px;
+  background: $subtle-border-color;
+  box-shadow: $card-box-shadow;
+  border-radius: $border-radius;
+
+  .g-grid-content {
+    border-radius: $border-radius;
+    padding: 0;
+    background: #DFDFDF;
+    overflow: hidden;
+
+    .g-content-wrapper {
+      margin: 0 1px 1px 1px;
+    }
+  }
+
+  .ghp__card {
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+.g-grid-header {
+  display: flex;
+  height: 30px;
+  background-color: $primary;
+  color: white;
+  border-radius: $border-radius $border-radius 0 0;
+  align-items: center;
+  padding: 3px 10px;
+  justify-content: space-between;
+
+  button,
+  .k-button-icon {
+    outline: none !important;
+  }
+}

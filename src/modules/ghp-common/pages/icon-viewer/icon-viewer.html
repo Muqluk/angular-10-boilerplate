@@ -1,0 +1,46 @@
+<div style="display: flex; flex-direction: row; flex: 1 1 auto;">
+  <genesis-card>
+    <div>
+      <div>
+        <kendo-dropdownlist
+          [data]="iconTypes"
+          (selectionChange)="typeChanged($event)">
+        </kendo-dropdownlist>
+      </div>
+
+      <!-- [height]="400" -->
+      <kendo-listview
+        style="width: 550px"
+        [height]="600"
+        [data]="iconsOfType"
+        [containerClass]="'k-d-flex k-flex-row k-flex-wrap container'">
+        <ng-template kendoListViewHeaderTemplate>
+          <div class="header">
+            Icons in the {{iconType}} category
+          </div>
+        </ng-template>
+        <ng-template
+          kendoListViewItemTemplate
+          let-dataItem="dataItem"
+          let-isLast="isLast">
+          <div class="icon-item"
+            (click)="selectedItem(dataItem)">
+            <div style="font-size: 32px">
+              <div>
+                <span class="k-icon {{dataItem}} icon-item__icon"></span>
+              </div>
+            </div>
+            <div style="font-size: 11px;">
+              {{dataItem}}
+            </div>
+          </div>
+        </ng-template>
+      </kendo-listview>
+    </div>
+  </genesis-card>
+  <div style="display: flex; flex: 1 1 auto; height: 100%; border: 1px solid red;  ">
+    <div style="margin: auto; font-size: 250px !important">
+      <span class="k-icon {{selectedIcon}} icon-item__icon--selected"></span>
+    </div>
+  </div>
+</div>

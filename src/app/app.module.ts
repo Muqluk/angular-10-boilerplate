@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Params, RouterStateSnapshot } from '@angular/router';
+import { GhpCommonModule } from "modules/ghp-common/ghp-common.module";
 
 import { NgxsModule, StateContext } from '@ngxs/store';
 import { NgxsHmrLifeCycle, NgxsHmrSnapshot as Snapshot } from '@ngxs/hmr-plugin';
@@ -60,6 +61,7 @@ export class CustomRouterStateSerializer implements RouterStateSerializer<Router
     ButtonsModule,
     LayoutModule,
     PopupModule,
+    GhpCommonModule,
   ],
   providers: [
     {

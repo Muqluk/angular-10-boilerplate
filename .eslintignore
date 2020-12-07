@@ -1,8 +1,9 @@
-.sourcemaps
-.vscode
 build_scripts
 node_modules
 README__Docs
 webpack
 www
+ghp-common--original
+.sourcemaps
+.vscode
 __tests__

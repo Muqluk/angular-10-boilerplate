@@ -1,5 +1,3 @@
-$primary-text: white;
-
 $primary: #4d7ea3;
 $primary-2: rgba($primary, .65);
 $primary-3: rgba($primary, .15);
@@ -8,12 +6,13 @@ $secondary:#539a63;
 $secondary-2: rgba($secondary, .65);
 $secondary-3: rgba($secondary, .55);
 
-$error-color: red;
-$error-background: rgba(255, 0, 0, 0.07);
-$error-border: rgba(255, 0, 0, 0.1);
+$line-height: 1em;
 
-$font-family: Roboto,"Helvetica Neue",sans-serif;
-
+$font-family: Roboto,
+"Helvetica Neue",
+sans-serif;
+$font-size: 1rem;
+$primary-text: white;
 
 /*  Header  */
 $header-height: 55px;
@@ -27,5 +26,29 @@ $site-title-font-weight: 500;
 $site-title-font-size: 1.25rem;
 $site-title-font-family: $font-family;
 
+/* Drawer */
+$drawer-border-color: #E0E0E0;
+$drawer-wrapper-bg-color: #EFEFEF;
+
+$drawer-wrapper-border-right: 1px solid $drawer-border-color;
+
 /*  main content  */
 $content-bg-color: white;
+$subtle-border-color: rgba(0, 0, 0, .08);
+$subtle-border: .05rem solid $subtle-border-color;
+
+/*  Card  */
+
+$grid-border-color: rgba(0, 0, 0, 0.08);
+$card-box-shadow: -3px 3px 6px 1px rgba(0, 0, 0, 0.2);
+$border-radius: 4px;
+
+
+/*  end Card  */
+
+/* Forms */
+$formFontSize: .8rem;
+
+
+/* kendo */
+$grid-background-dark: #eeeeee;

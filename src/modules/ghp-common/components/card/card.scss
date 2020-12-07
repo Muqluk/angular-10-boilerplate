@@ -1,0 +1,40 @@
+@import '../../assets/scss/common.scss';
+
+.g-card {
+  min-width: 300px;
+  margin: 10px;
+  // background: white;
+  background: $subtle-border-color;
+  box-shadow: $card-box-shadow;
+  border-radius: $border-radius; 
+  
+  .g-card-content {
+    padding: 2px;
+    min-height: 6px;    
+
+  }
+  .g-content {
+    background: white;
+    border: $subtle-border;
+    border-radius: $border-radius;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+.g-card-header {
+  display: flex;
+  height: 30px;
+  background-color: $primary;
+  color: white;
+  border-radius: $border-radius $border-radius 0 0;
+  align-items: center;
+  padding: 3px 10px;
+  justify-content: space-between;
+
+  button,
+  .k-button-icon {
+    outline: none !important;
+  }
+}
+

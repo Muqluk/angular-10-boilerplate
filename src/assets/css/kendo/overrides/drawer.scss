@@ -1,0 +1,19 @@
+kendo-drawer-container {
+  height: calc(100% - #{$header-height});
+}
+
+.k-drawer-content {
+  height: 100%;
+}
+
+.k-drawer-wrapper {
+  height: 100%;
+  background-color: $drawer-wrapper-bg-color !important;
+  border-right: $drawer-wrapper-border-right;
+  color: $primary;
+}
+
+.k-drawer-item.k-state-selected {
+  color: #ffffff;
+  background-color: $secondary;
+}

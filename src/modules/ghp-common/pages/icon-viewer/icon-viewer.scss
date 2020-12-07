@@ -1,0 +1,29 @@
+.container {
+  justify-content: space-evenly;
+}
+
+.wrap {
+  white-space: normal;
+}
+
+
+.icon-item {
+  display: flex; 
+  flex: 1 1 auto; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-bottom: 1px solid black;
+  margin: 3px;
+}
+
+.icon-item__icon {
+  color: blue;
+  font-size: 25px !important;
+}
+
+.icon-item__icon--selected {
+  font-size: 250px !important;
+}

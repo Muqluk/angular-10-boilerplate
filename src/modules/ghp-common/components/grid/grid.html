@@ -1,0 +1,42 @@
+<div class="g-grid">
+  <!-- <g-grid-header
+    [Title]="minimized ? MinTitle : Title"
+    [canMinimize]="canMinimize"
+    [minimized]="minimized"
+    (MinMaxContent)="minMaxToggle($event)">
+  </g-grid-header> -->
+  <div
+    class="g-grid-content">
+    <!-- [@showHideContent]="{ 
+      value: minimized, 
+      params: { minimizedHeight: minimizedHeight, duration: duration }}"> -->
+    <div>
+      <div class="g-content-wrapper">
+        <div
+          class="ghp-grid ghp__card"
+          [ngStyle]="{'min-height': height+'px', 'background-color': 'white'}">
+          <!-- *ngIf="isVisible"> -->
+          <kendo-grid
+            #gridRef
+            [kendoGridBinding]="data"
+            [loading]="loading"
+            [pageable]="pageable"
+            [pageSize]="pageSize"
+            [resizable]=true
+            (columnResize)="onColumnResize($event)"
+            [scrollable]="scrollable"
+            [height]="550">
+            <kendo-grid-column
+              *ngFor="let column of columns"
+              field="{{column.field}}"
+              title="{{column.title}}"
+              format="{{column.format}}"
+              [width]="column.width ? column.width : 100"
+              [hidden]="column.hidden ? true : false">
+            </kendo-grid-column>
+          </kendo-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
