@@ -1,1 +1,12 @@
 @import 'assets/css/vars.scss';
+@import "./kendo/all.scss";
+
+.g-grid-component {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  overflow: auto;
+  background: orangered;
+  margin: 10px;
+}

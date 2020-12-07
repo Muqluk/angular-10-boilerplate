@@ -1,29 +1,42 @@
-<kendo-grid
-  #gridRef
-  [data]="data"
-  [loading]="loading"
-
-  (columnVisibilityChange)="columnVisibilityChange($event)"
-
-  [pageable]="pageable"
-  [pageSize]="pageSize"
-
-  [height]="height">
-  <!-- [virtualColumns]="true" -->
-  <ng-template kendoGridToolbarTemplate>
-    <div style="display: flex; flex: 1 1 auto; ">
-      <div>
-        <button kendoButton (click)="clikity(gridRef)">Click</button>
-      </div>
-      <div style=" display: flex; flex: 1 1 auto;"></div>
-      <div>
-        <!-- <kendo-grid-column-chooser
-          class="column-chooser"
-          allowHideAll="false"
-          autoSync="true">
-        </kendo-grid-column-chooser> -->
+<div class="g-grid">
+  <!-- <g-grid-header
+    [Title]="minimized ? MinTitle : Title"
+    [canMinimize]="canMinimize"
+    [minimized]="minimized"
+    (MinMaxContent)="minMaxToggle($event)">
+  </g-grid-header> -->
+  <div
+    class="g-grid-content">
+    <!-- [@showHideContent]="{ 
+      value: minimized, 
+      params: { minimizedHeight: minimizedHeight, duration: duration }}"> -->
+    <div>
+      <div class="g-content-wrapper">
+        <div
+          class="ghp-grid ghp__card"
+          [ngStyle]="{'min-height': height+'px', 'background-color': 'white'}">
+          <!-- *ngIf="isVisible"> -->
+          <kendo-grid
+            #gridRef
+            [kendoGridBinding]="data"
+            [loading]="loading"
+            [pageable]="pageable"
+            [pageSize]="pageSize"
+            [resizable]=true
+            (columnResize)="onColumnResize($event)"
+            [scrollable]="scrollable"
+            [height]="550">
+            <kendo-grid-column
+              *ngFor="let column of columns"
+              field="{{column.field}}"
+              title="{{column.title}}"
+              format="{{column.format}}"
+              [width]="column.width ? column.width : 100"
+              [hidden]="column.hidden ? true : false">
+            </kendo-grid-column>
+          </kendo-grid>
+        </div>
       </div>
     </div>
-
-  </ng-template>
-</kendo-grid>
+  </div>
+</div>
