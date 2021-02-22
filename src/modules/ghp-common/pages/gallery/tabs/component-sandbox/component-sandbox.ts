@@ -25,6 +25,7 @@ const getProducts = () => products.rows.map((p: any): any => {
     ShortTitle,
     Publisher,
     Copyright, } = p;
+
   return {
     ProductId,
     Title,
@@ -42,24 +43,6 @@ const getProducts = () => products.rows.map((p: any): any => {
   };
 });
 
-/*
-  { 
-    ProductId
-    Title
-    Price
-    PublishingCategory
-    LicenseCatgory
-    Series
-    Author
-    PubDate
-    Media
-    ISBN
-    ShortTitle
-    Publisher
-    Copyright
-  },
-*/
-
 @Component({
   selector: 'component-sandbox',
   styleUrls: ['component-sandbox.scss'],
@@ -76,13 +59,7 @@ export class ComponentSandbox implements OnInit {
     { field: 'ShortTitle', title: 'ShortTitle', width: 200 },
     { field: 'Series', title: 'Series', width: 200 },
     { field: 'Media', title: 'Media', width: 100 },
-    // { field: 'Price', title: 'Price', width: 100, hidden: true},
-    // { field: 'PublishingCategory', title: 'PublishingCategory', width: 100, hidden: true },
-    // { field: 'LicenseCatgory', title: 'LicenseCatgory', width: 100, hidden: true },
-    // { field: 'PubDate', title: 'PubDate', width: 100, hidden: true },
-    // { field: 'ISBN', title: 'ISBN', width: 100, hidden: true },
     { field: 'Publisher', title: 'Publisher', width: 100 },
-    // { field: 'Copyright', title: 'Copyright', width: 100, hidden: true },
   ];
 
   constructor(private api: RestProvider) { }

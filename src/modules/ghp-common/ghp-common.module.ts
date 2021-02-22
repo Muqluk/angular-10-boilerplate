@@ -44,7 +44,14 @@ const routePrefix = 'gallery'
 
 export const ModuleRoutes = [
   { path: '', component: GalleryPage },
-  { path: `${routePrefix}/icons`, icon: 'k-i-image', pathMatch: 'full', component: IconViewerPage, text: 'Icons' },
+  {
+    path:
+      `${routePrefix}/icons`,
+    icon: 'k-i-image',
+    pathMatch: 'full',
+    component: IconViewerPage,
+    text: 'Icons'
+  },
 ]
 //#endregion
 
